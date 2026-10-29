@@ -193,9 +193,16 @@ h3 { font-family: var(--f-primary); font-weight: 800; font-style: italic; font-s
 .case { background: var(--paper); border: 1px solid var(--line); display: flex; flex-direction: column; min-width: 0; }
 .case header { padding: 18px 22px 16px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; align-items: baseline; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .case header b { color: var(--red-ink); font-weight: 500; }
-.case .in { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.case .shot { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-2); border-bottom: 1px solid var(--line); }
+.case .shot img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.case:hover .shot img { transform: scale(1.03); }
+.case .shot.blank { display: flex; align-items: center; justify-content: center; background: var(--band); }
+.case .shot.blank span { font-family: var(--f-secondary); font-weight: 200; font-style: italic; font-size: 40px; color: var(--band-ink); letter-spacing: -0.01em; }
+.case .in { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.case .more { margin-top: 2px; align-self: flex-start; font-size: 13.5px; font-weight: 600; color: var(--red-ink); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+.case .more:hover { color: var(--ink); }
 .case p { margin: 0; font-size: 14.5px; color: var(--muted); }
-.case .result { margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--ink); }
+.case .result { margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--ink); }
 .case .result b { font-family: var(--f-primary); font-weight: var(--w-primary); font-style: italic; font-size: 21px; color: var(--red-ink); margin-right: 6px; }
 
 /* Clients */
@@ -426,51 +433,58 @@ h3 { font-family: var(--f-primary); font-weight: 800; font-style: italic; font-s
     <div class="work">
       <article class="case">
         <header><b>Under Armour</b><span>2017–2018</span></header>
+        <a class="shot" href="https://about.underarmour.com/en-us/stories/2018/11/let-s-connect.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/work/ua-hovr-connected.jpg" alt="" loading="lazy" style="object-position:50% 50%"></a>
         <div class="in">
           <h3>UA HOVR Connected Footwear</h3>
-          <p>Led a six-person development and product testing team through an 18-month program with multinational development partners, then built a 100% multi-stage QC system across several footwear factories.</p>
           <div class="result"><b>1M+</b>units produced</div>
+          <a class="more" href="https://about.underarmour.com/en-us/stories/2018/11/let-s-connect.html" target="_blank" rel="noopener">Read the Under Armour story <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <article class="case">
         <header><b>Under Armour</b><span>2015–2016</span></header>
+        <a class="shot" href="https://www.prnewswire.com/news-releases/under-armour-launches-a-suite-of-connected-fitness-products-changing-the-way-athletes-live-300199284.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/work/ua-speedform-record-equipped.jpg" alt="" loading="lazy" style="object-position:45% 50%"></a>
         <div class="in">
           <h3>UA Speedform Record Equipped</h3>
-          <p>Led development and launch of Under Armour's first smart shoe. Worked with manufacturing partners in Asia and Europe and developed and installed the production quality test stations.</p>
           <div class="result"><b>1st</b>Under Armour smart shoe, debuted at CES</div>
+          <a class="more" href="https://www.prnewswire.com/news-releases/under-armour-launches-a-suite-of-connected-fitness-products-changing-the-way-athletes-live-300199284.html" target="_blank" rel="noopener">Read the CES 2016 press release <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <article class="case">
         <header><b>Under Armour</b><span>2011–2014</span></header>
+        <a class="shot" href="https://www.prnewswire.com/news-releases/under-armour-launches-i-will-its-biggest-ever-global-marketing-campaign-190893871.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/work/ua-armour39.jpg" alt="" loading="lazy" style="object-position:30% 40%"></a>
         <div class="in">
           <h3>Armour39 Performance Monitor</h3>
-          <p>Led mechanical design for the strap and watch, from 3D-modeled prototypes and FEA through production in Southeast Asia. Gathered athlete feedback at the NFL Combine.</p>
           <div class="result"><b>0→1</b>Connected wearable taken to launch</div>
+          <a class="more" href="https://www.prnewswire.com/news-releases/under-armour-launches-i-will-its-biggest-ever-global-marketing-campaign-190893871.html" target="_blank" rel="noopener">Read the 2013 press release <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <article class="case">
         <header><b>lululemon</b><span>2020–2023</span></header>
+        <a class="shot" href="https://corporate.lululemon.com/media/press-releases/2022/03-08-2022-160026580" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://mms.businesswire.com/media/20220308005856/en/1383081/23/1-_lululemon_Footwear.jpg" alt="" loading="lazy" style="object-position:50% 50%"></a>
         <div class="in">
           <h3>lululemon footwear launch</h3>
-          <p>Led 3D visualization, development and biomechanics for blissfeel, chargefeel, strongfeel, restfeel, beyondfeel and cityverse, and created footwear for every athlete in the FURTHER ultra-marathon.</p>
           <div class="result"><b>6</b>footwear lines brought to market</div>
+          <a class="more" href="https://corporate.lululemon.com/media/press-releases/2022/03-08-2022-160026580" target="_blank" rel="noopener">Read the 2022 press release <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <article class="case">
         <header><b>lululemon</b><span>2023–2025</span></header>
+        <a class="shot" href="https://corporate.lululemon.com/media/press-releases/2024/03-05-2024-190015999" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://mms.businesswire.com/media/20240305929624/en/2055213/23/lululemon_FURTHER_Athletes_Group_Portrait.jpg" alt="" loading="lazy" style="object-position:50% 45%"></a>
         <div class="in">
           <h3>Footwear Innovation Research labs</h3>
-          <p>Established human performance, human perception and engineering research labs, specified their equipment, added simulation capability, and correlated data across all three.</p>
           <div class="result"><b>3</b>research labs built from the ground up</div>
+          <a class="more" href="https://corporate.lululemon.com/media/press-releases/2024/03-05-2024-190015999" target="_blank" rel="noopener">Read the FURTHER press release <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <article class="case">
         <header><b>Dilatant, LLC</b><span>2019–present</span></header>
+        <div class="shot blank" aria-hidden="true"><span>Dilatant</span></div>
         <div class="in">
           <h3>Dynamic restraint technology</h3>
-          <p>Co-founded the company and lead it as CTO: prototypes, market research, product and test strategy, patent filing, and the pitch deck behind funding and grant applications.</p>
           <div class="result"><b>CTO</b>Startup built from the ground up</div>
         </div>
+      </article>
+    </div>
       </article>
     </div>
   </div>
